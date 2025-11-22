@@ -23,21 +23,19 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10 px-4 py-20">
-        <div className="flex items-center gap-4 mb-4">
-          <img
-            src={cristalyLogo}
-            alt="Cristaly - Automação Inteligente com IA"
-            className="w-24 h-24 md:w-32 md:h-32 animate-scale-in drop-shadow-glow"
-          />
-        
-          <img
-            alt="Cristaly"
-            src="/lovable-uploads/e745fd16-6c9b-457e-8d60-d4fdec4038fd.png"
-            className="h-6 md:h-8 opacity-100 object-contain animate-fade-in"
-          />
-        </div>
+      <div className="flex items-center gap-4 mb-4">
+  <img
+    src={cristalyLogo}
+    alt="Cristaly - Automação Inteligente com IA"
+    className="w-24 h-24 md:w-32 md:h-32 animate-scale-in drop-shadow-glow"
+  />
 
-
+  <img
+    alt="Cristaly"
+    src="/lovable-uploads/e745fd16-6c9b-457e-8d60-d4fdec4038fd.png"
+    className="h-6 md:h-8 opacity-100 object-contain animate-fade-in"
+  />
+</div>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm border border-primary/30 rounded-full">
             <Sparkles className="w-4 h-4 text-primary" />
