@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import cristalyLogo from "@/assets/cristaly-logo.png";
+import cristalyText from "@/assets/cristaly-text.png";
 
 export const Hero = () => {
   return (
@@ -15,15 +16,17 @@ export const Hero = () => {
       <div className="container relative z-10 px-4 py-20">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Logo */}
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-6 mb-4">
             <img 
               src={cristalyLogo} 
               alt="Cristaly - Automação Inteligente com IA" 
               className="w-24 h-24 md:w-32 md:h-32 animate-scale-in drop-shadow-glow"
             />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground">
-              Cristaly<sup className="text-2xl">™</sup>
-            </h1>
+            <img 
+              src={cristalyText} 
+              alt="Cristaly" 
+              className="h-12 md:h-16 animate-scale-in"
+            />
           </div>
 
           {/* Badge */}
