@@ -25,7 +25,7 @@ export const Hero = () => {
             <img 
               src={cristalyText} 
               alt="Cristaly" 
-              className="h-12 md:h-16 animate-scale-in"
+              className="h-8 md:h-12 animate-scale-in"
             />
           </div>
 
