@@ -18,8 +18,8 @@ export const Hero = () => {
           <div className="flex items-center gap-4 mb-4">
             <img 
               src={cristalyLogo} 
-              alt="Cristaly Logo" 
-              className="w-20 h-20 md:w-24 md:h-24 animate-scale-in drop-shadow-glow"
+              alt="Cristaly - Automação Inteligente com IA" 
+              className="w-24 h-24 md:w-32 md:h-32 animate-scale-in drop-shadow-glow"
             />
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground">
               Cristaly<sup className="text-2xl">™</sup>
