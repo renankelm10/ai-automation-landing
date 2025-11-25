@@ -27,10 +27,13 @@ export const CTA = () => {
           <div className="flex justify-center items-center pt-4">
             <Button
               size="lg"
+              asChild
               className="h-16 px-10 text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
             >
-              <Calendar className="mr-2 w-6 h-6" />
-              Agendar Conversa
+              <a href="https://wa.me/554991502058?text=Ol%C3%A1%2C%20quero%20automatizar%20meu%20neg%C3%B3cio%21" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 w-6 h-6" />
+                Agendar Conversa
+              </a>
             </Button>
           </div>
 
