@@ -19,8 +19,7 @@ const SobreNos = () => {
               Sobre a Cristaly.ai
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Somos apaixonados por transformar negócios através da inteligência artificial. 
-              Nossa missão é democratizar a automação e torná-la acessível para todos.
+              Nascemos para trazer flexibilidade e eficiência para empresas locais através da inteligência artificial.
             </p>
           </div>
         </div>
@@ -32,16 +31,17 @@ const SobreNos = () => {
           <h2 className="text-3xl font-bold mb-8">Nossa História</h2>
           <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-              A Cristaly.ai nasceu da necessidade real de pequenos e médios negócios que queriam 
-              competir com grandes empresas, mas não tinham recursos para grandes equipes de atendimento.
+              A Cristaly.ai foi criada por <strong className="text-foreground">Renan Kelm</strong> com uma proposta clara: 
+              trazer maior flexibilidade para empresas locais da região onde morava.
             </p>
             <p>
-              Percebemos que a inteligência artificial poderia ser a solução, mas a maioria das 
-              plataformas era complexa demais, cara demais, ou simplesmente não funcionava bem em português.
+              A ideia surgiu ao perceber que muitos negócios perdiam tempo com tarefas repetitivas 
+              que poderiam ser automatizadas. Com a inteligência artificial certa, seria possível 
+              reduzir tempo e melhorar o trabalho de diversas áreas e setores.
             </p>
             <p>
-              Então criamos a Cristaly.ai: uma plataforma brasileira, feita para brasileiros, 
-              que entende o jeito único de nos comunicarmos e fazer negócios.
+              Assim nasceu a Cristaly.ai — uma solução pensada para empresas que querem crescer 
+              de forma inteligente, otimizando processos e liberando tempo para o que realmente importa.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const SobreNos = () => {
               </div>
               <h3 className="text-xl font-semibold">Foco no Cliente</h3>
               <p className="text-muted-foreground">
-                Cada decisão que tomamos tem o sucesso dos nossos clientes em mente.
+                Soluções pensadas para resolver problemas reais do seu negócio.
               </p>
             </div>
 
@@ -67,9 +67,9 @@ const SobreNos = () => {
               <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto">
                 <Zap className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold">Inovação Constante</h3>
+              <h3 className="text-xl font-semibold">Inovação</h3>
               <p className="text-muted-foreground">
-                Estamos sempre buscando as melhores tecnologias e práticas do mercado.
+                Sempre buscando as melhores tecnologias do mercado.
               </p>
             </div>
 
@@ -77,9 +77,9 @@ const SobreNos = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Humanização</h3>
+              <h3 className="text-xl font-semibold">Eficiência</h3>
               <p className="text-muted-foreground">
-                IA deve aumentar conexões humanas, não substituí-las completamente.
+                Reduzir tempo e melhorar resultados é nosso objetivo.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ const SobreNos = () => {
               </div>
               <h3 className="text-xl font-semibold">Transparência</h3>
               <p className="text-muted-foreground">
-                Comunicação clara, preços justos e resultados mensuráveis sempre.
+                Comunicação clara e resultados mensuráveis.
               </p>
             </div>
           </div>
@@ -101,9 +101,8 @@ const SobreNos = () => {
         <div className="container mx-auto max-w-4xl text-center space-y-8">
           <h2 className="text-3xl font-bold">Nossa Missão</h2>
           <p className="text-xl text-muted-foreground">
-            Democratizar a inteligência artificial para negócios de todos os tamanhos, 
-            permitindo que empreendedores brasileiros escalem suas operações sem perder 
-            a qualidade do atendimento que os tornou especiais.
+            Ajudar empresas a otimizarem seus processos e reduzirem tempo através de 
+            soluções de inteligência artificial práticas e eficientes.
           </p>
         </div>
       </section>
