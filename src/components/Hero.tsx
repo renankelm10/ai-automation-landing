@@ -1,82 +1,106 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Zap, Globe } from "lucide-react";
 import cristalyLogo from "@/assets/cristaly-logo.png";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "4s" }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background selection:bg-primary/30">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-50" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-accent/10 rounded-full blur-[100px] opacity-30" />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
 
-      <div className="container relative z-10 px-4 py-20">
-        <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
-          {/* Logo */}
-          <div className="flex items-center gap-4 mb-4">
-            <img 
-              src={cristalyLogo} 
-              alt="Cristaly - Automação Inteligente com IA" 
-              className="w-24 h-24 md:w-32 md:h-32 animate-scale-in drop-shadow-glow"
-            />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground">
-              Cristaly<sup className="text-2xl">™</sup>
-            </h1>
-          </div>
+      <div className="container relative z-10 px-4 pt-20 pb-32">
+        <div className="flex flex-col items-center text-center space-y-10 animate-fade-in">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm border border-primary/30 rounded-full">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Automação Inteligente com IA</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span className="text-sm font-medium text-primary-foreground/80 tracking-wide">
+              A Nova Era da Automação
+            </span>
           </div>
 
-          {/* Headline */}
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold max-w-5xl leading-tight">
-            Atendimento <span className="bg-gradient-primary bg-clip-text text-transparent">Lento?</span>
-            <br />
-            <span className="text-3xl md:text-5xl lg:text-6xl">Mude Isso Agora</span>
-          </h2>
+          {/* Main Content */}
+          <div className="space-y-6 max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <img
+                src={cristalyLogo}
+                alt="Cristaly AI"
+                className="w-16 h-16 md:w-20 md:h-20 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+              />
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
+                Cristaly<span className="text-primary">.ai</span>
+              </h1>
+            </div>
 
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
-            Automatize seu atendimento no WhatsApp e redes sociais com inteligência artificial. 
-            Responda mais rápido, converta mais vendas.
-          </p>
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{ animationDelay: "0.3s" }}>
+              Transforme seu Atendimento com <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
+                Inteligência Artificial
+              </span>
+            </h2>
+
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
+              Automatize conversas, aumente vendas e ofereça suporte 24/7.
+              A plataforma definitiva para escalar seu negócio sem aumentar a equipe.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
+            <Button
+              size="lg"
+              className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
             >
               Começar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              size="lg" 
+
+            <Button
+              size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+              className="h-14 px-8 text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all duration-300 rounded-xl"
             >
-              Ver Como Funciona
+              Ver Demonstração
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border/30">
-            <div className="space-y-2">
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">98%</p>
-              <p className="text-sm text-muted-foreground">Taxa de Resposta</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-accent bg-clip-text text-transparent">24/7</p>
-              <p className="text-sm text-muted-foreground">Atendimento</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">3x</p>
-              <p className="text-sm text-muted-foreground">Mais Conversões</p>
-            </div>
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 w-full max-w-5xl animate-slide-up" style={{ animationDelay: "0.6s" }}>
+            {[
+              {
+                icon: Bot,
+                title: "Atendimento 24/7",
+                desc: "Seu negócio nunca mais fecha. Respostas instantâneas a qualquer hora."
+              },
+              {
+                icon: Zap,
+                title: "Respostas Instantâneas",
+                desc: "Zero tempo de espera. Satisfação do cliente garantida."
+              },
+              {
+                icon: Globe,
+                title: "Omnichannel",
+                desc: "WhatsApp, Instagram e Web. Tudo em um só lugar."
+              }
+            ].map((feature, i) => (
+              <div key={i} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                <div className="mb-4 inline-flex p-3 rounded-xl bg-primary/20 text-primary group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
