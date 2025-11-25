@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Bot, Zap, Globe } from "lucide-react";
+import { ArrowRight, Bot, Zap, Globe, Settings } from "lucide-react";
 import cristalyLogo from "@/assets/cristaly-logo.png";
 
 export const Hero = () => {
@@ -43,15 +43,15 @@ export const Hero = () => {
             </div>
 
             <h2 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              Transforme seu Atendimento com <br />
+              Automatize Seu Negócio com <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
                 Inteligência Artificial
               </span>
             </h2>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
-              Automatize conversas, aumente vendas e ofereça suporte 24/7.
-              A plataforma definitiva para escalar seu negócio sem aumentar a equipe.
+              Automatize atendimento, vendas e processos com IA. 
+              Ofereça suporte 24/7 e escale seu negócio de forma inteligente.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export const Hero = () => {
               size="lg"
               className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
             >
-              Começar Agora
+              Agendar Conversa
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
@@ -70,7 +70,7 @@ export const Hero = () => {
               variant="outline"
               className="h-14 px-8 text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all duration-300 rounded-xl"
             >
-              Ver Demonstração
+              Ver Como Funciona
             </Button>
           </div>
 
@@ -80,17 +80,17 @@ export const Hero = () => {
               {
                 icon: Bot,
                 title: "Atendimento 24/7",
-                desc: "Seu negócio nunca mais fecha. Respostas instantâneas a qualquer hora."
+                desc: "Respostas automáticas a qualquer hora, em qualquer canal."
               },
               {
                 icon: Zap,
-                title: "Respostas Instantâneas",
-                desc: "Zero tempo de espera. Satisfação do cliente garantida."
+                title: "Qualificação de Leads",
+                desc: "Identifica e prioriza automaticamente os melhores clientes."
               },
               {
-                icon: Globe,
-                title: "Omnichannel",
-                desc: "WhatsApp, Instagram e Web. Tudo em um só lugar."
+                icon: Settings,
+                title: "Automação de Processos",
+                desc: "Lembretes, agendamentos e notificações no piloto automático."
               }
             ].map((feature, i) => (
               <div key={i} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">

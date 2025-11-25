@@ -1,35 +1,35 @@
-import { Bot, Zap, TrendingUp, Shield, MessageSquare, Clock } from "lucide-react";
+import { Bot, Workflow, Plug, Brain, Clock, BarChart3 } from "lucide-react";
 
 const features = [
   {
     icon: Bot,
-    title: "IA Avançada",
-    description: "Chatbots inteligentes que aprendem com cada interação para melhor atender seus clientes.",
+    title: "Automação de Atendimento",
+    description: "Chatbots inteligentes no WhatsApp, Instagram e Web. Respostas automáticas 24/7 que liberam sua equipe.",
   },
   {
-    icon: Zap,
-    title: "Respostas Instantâneas",
-    description: "Atenda seus clientes em segundos, 24 horas por dia, 7 dias por semana, sem interrupções.",
+    icon: Workflow,
+    title: "Automação de Processos",
+    description: "Workflows automáticos para tarefas repetitivas. Notificações, lembretes e aprovações sem intervenção manual.",
   },
   {
-    icon: MessageSquare,
-    title: "Multi-Canal",
-    description: "WhatsApp, Instagram, Facebook Messenger e mais, tudo em uma única plataforma.",
+    icon: Plug,
+    title: "Integração com Sistemas",
+    description: "Conecte com CRM, planilhas e ferramentas que você já usa. Centralize informações em um só lugar.",
   },
   {
-    icon: TrendingUp,
-    title: "Aumente Vendas",
-    description: "Conversões aumentam até 3x com atendimento rápido e personalizado por IA.",
-  },
-  {
-    icon: Shield,
-    title: "Segurança Total",
-    description: "Dados criptografados e protegidos seguindo as melhores práticas de segurança.",
+    icon: Brain,
+    title: "IA Personalizada",
+    description: "Inteligência artificial treinada especificamente para seu negócio, que aprende com cada interação.",
   },
   {
     icon: Clock,
-    title: "Economia de Tempo",
-    description: "Automatize tarefas repetitivas e foque no que realmente importa para o seu negócio.",
+    title: "Disponibilidade Total",
+    description: "Seu negócio nunca fecha. Atenda clientes a qualquer hora sem aumentar custos operacionais.",
+  },
+  {
+    icon: BarChart3,
+    title: "Relatórios Simples",
+    description: "Acompanhe métricas importantes com dashboards claros. Veja o que está funcionando de forma visual.",
   },
 ];
 

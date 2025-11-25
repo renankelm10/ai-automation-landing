@@ -1,23 +1,23 @@
-import { MessageCircle, Settings, Rocket, ArrowRight } from "lucide-react";
+import { MessageCircle, Settings, LineChart, ArrowRight } from "lucide-react";
 
 const steps = [
   {
     icon: MessageCircle,
     number: "01",
-    title: "Conecte Seus Canais",
-    description: "Integre WhatsApp, Instagram e outras plataformas em minutos, sem complicação.",
+    title: "Conversa Inicial",
+    description: "Entendemos seu negócio e identificamos oportunidades de automação em uma conversa de 20-30 minutos.",
   },
   {
     icon: Settings,
     number: "02",
-    title: "Configure a IA",
-    description: "Personalize o comportamento do chatbot de acordo com o seu negócio e marca.",
+    title: "Configuração Personalizada",
+    description: "Criamos e treinamos a automação especificamente para suas necessidades e processos.",
   },
   {
-    icon: Rocket,
+    icon: LineChart,
     number: "03",
-    title: "Comece a Automatizar",
-    description: "Deixe a IA trabalhar por você enquanto foca em expandir seu negócio.",
+    title: "Acompanhamento",
+    description: "Ajustamos e melhoramos conforme você usa. A IA evolui junto com seu negócio.",
   },
 ];
 
@@ -30,7 +30,7 @@ export const HowItWorks = () => {
             Como <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">Funciona</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Em apenas 3 passos simples, você está pronto para revolucionar seu atendimento
+            Processo simples e transparente para começar a automatizar
           </p>
         </div>
 
