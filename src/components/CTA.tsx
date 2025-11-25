@@ -8,19 +8,19 @@ export const CTA = () => {
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
 
       <div className="container mx-auto relative z-10">
-        <div className="max-w-5xl mx-auto bg-white/5 border border-white/10 rounded-3xl md:rounded-[2.5rem] p-6 md:p-12 lg:p-16 backdrop-blur-xl shadow-2xl text-center space-y-6 md:space-y-10 overflow-hidden relative group">
+        <div className="max-w-5xl mx-auto bg-white/5 border border-white/10 rounded-3xl md:rounded-[2.5rem] p-5 sm:p-6 md:p-12 lg:p-16 backdrop-blur-xl shadow-2xl text-center space-y-4 sm:space-y-6 md:space-y-10 overflow-hidden relative group">
 
           {/* Glow Effect */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
             Vamos Conversar Sobre <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">
               Automação?
             </span>
           </h2>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto">
             Agende uma conversa de 30 minutos para entender se faz sentido para o seu negócio.
           </p>
 
@@ -28,26 +28,26 @@ export const CTA = () => {
             <Button
               size="lg"
               asChild
-              className="h-12 md:h-16 px-6 md:px-10 text-base md:text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+              className="h-10 sm:h-12 md:h-14 px-5 sm:px-6 md:px-10 text-sm sm:text-base md:text-lg bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
             >
               <a href="https://wa.me/554991502058?text=Ol%C3%A1%2C%20quero%20automatizar%20meu%20neg%C3%B3cio%21" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 w-5 h-5 md:w-6 md:h-6" />
+                <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 Agendar Conversa
               </a>
             </Button>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 md:gap-6 pt-4 md:pt-8 text-xs md:text-sm text-muted-foreground/80">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 md:gap-6 pt-4 md:pt-8 text-[10px] sm:text-xs md:text-sm text-muted-foreground/80">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-primary" />
+              <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
               <span>Entenda seu caso específico</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-primary" />
+              <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
               <span>Veja exemplos práticos</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-primary" />
+              <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
               <span>Sem pressão, sem compromisso</span>
             </div>
           </div>
