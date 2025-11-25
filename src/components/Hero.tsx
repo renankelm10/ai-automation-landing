@@ -55,22 +55,14 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
+          {/* CTA Button */}
+          <div className="flex justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
             <Button
               size="lg"
               className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
             >
               Agendar Conversa
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-14 px-8 text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all duration-300 rounded-xl"
-            >
-              Ver Como Funciona
             </Button>
           </div>
 

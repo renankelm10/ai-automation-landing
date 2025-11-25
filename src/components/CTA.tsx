@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Mail, CheckCircle2 } from "lucide-react";
+import { Calendar, CheckCircle2 } from "lucide-react";
 
 export const CTA = () => {
   return (
@@ -24,21 +24,13 @@ export const CTA = () => {
             Agende uma conversa de 30 minutos para entender se faz sentido para o seu negócio.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+          <div className="flex justify-center items-center pt-4">
             <Button
               size="lg"
               className="h-16 px-10 text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
             >
               <Calendar className="mr-2 w-6 h-6" />
               Agendar Conversa
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-16 px-10 text-xl border-white/20 bg-transparent hover:bg-white/10 text-white transition-all duration-300 rounded-2xl"
-            >
-              <Mail className="mr-2 w-6 h-6" />
-              Enviar Mensagem
             </Button>
           </div>
 
