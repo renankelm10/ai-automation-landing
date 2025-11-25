@@ -2,12 +2,12 @@ import { Instagram, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black border-t border-white/10 pt-12 md:pt-20 pb-8 md:pb-10 px-4">
+    <footer className="bg-black border-t border-white/10 pt-10 sm:pt-12 md:pt-20 pb-8 md:pb-10 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1 space-y-4 md:space-y-6">
-            <h3 className="text-xl md:text-2xl font-bold text-white">Cristaly<span className="text-primary">.ai</span></h3>
+          <div className="col-span-2 md:col-span-1 space-y-3 sm:space-y-4 md:space-y-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Cristaly<span className="text-primary">.ai</span></h3>
             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
               Transformando o atendimento ao cliente com inteligência artificial de ponta.
               Escale seu negócio sem perder a humanidade.
@@ -20,9 +20,9 @@ export const Footer = () => {
           </div>
 
           {/* Solutions */}
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <h4 className="font-semibold text-white text-sm md:text-base">Soluções</h4>
-            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
               <li><a href="/solucoes/whatsapp-bot" className="hover:text-primary transition-colors">WhatsApp Bot</a></li>
               <li><a href="/solucoes/instagram-direct" className="hover:text-primary transition-colors">Instagram Direct</a></li>
               <li><a href="/solucoes/crm-integrado" className="hover:text-primary transition-colors">CRM Integrado</a></li>
@@ -31,17 +31,17 @@ export const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <h4 className="font-semibold text-white text-sm md:text-base">Empresa</h4>
-            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
               <li><a href="/sobre-nos" className="hover:text-primary transition-colors">Sobre Nós</a></li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <h4 className="font-semibold text-white text-sm md:text-base">Contato</h4>
-            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4 text-xs md:text-sm text-muted-foreground">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
                 <a href="mailto:traffio.social@gmail.com" className="hover:text-primary transition-colors">
