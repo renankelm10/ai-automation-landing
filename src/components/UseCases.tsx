@@ -25,14 +25,15 @@ const useCases = [
 
 export const UseCases = () => {
   return (
-    <section className="py-32 px-4 relative overflow-hidden bg-background">
+    <section className="py-32 px-4 relative overflow-hidden bg-black/20">
       {/* Background Gradients */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-24 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Casos de Uso <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Práticos</span>
           </h2>

@@ -43,7 +43,7 @@ export const Features = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-24 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Por Que Escolher a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Cristaly</span>?
           </h2>

@@ -34,7 +34,7 @@ export const Testimonials = () => {
   return (
     <section className="py-32 px-4 relative overflow-hidden bg-black/40">
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-24 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             O Que Dizem <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Nossos Clientes</span>
           </h2>
@@ -47,15 +47,15 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 backdrop-blur-sm space-y-6"
+              className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm space-y-6"
             >
               {/* Avatar and Info */}
               <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
+                <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0 shadow-lg`}>
                   {testimonial.initials}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
+                  <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors">{testimonial.name}</h4>
                   <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
                   <p className="text-xs text-muted-foreground/60">{testimonial.industry}</p>
                 </div>
@@ -69,7 +69,7 @@ export const Testimonials = () => {
               </div>
 
               {/* Testimonial */}
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed group-hover:text-white/90 transition-colors">
                 "{testimonial.testimonial}"
               </p>
             </div>
