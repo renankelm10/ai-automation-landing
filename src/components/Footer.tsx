@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -13,14 +13,8 @@ export const Footer = () => {
               Escale seu negócio sem perder a humanidade.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/cristaly_ia" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -29,10 +23,10 @@ export const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-semibold text-white">Soluções</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">WhatsApp Bot</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Instagram Direct</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">CRM Integrado</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Analytics IA</a></li>
+              <li><a href="/solucoes/whatsapp-bot" className="hover:text-primary transition-colors">WhatsApp Bot</a></li>
+              <li><a href="/solucoes/instagram-direct" className="hover:text-primary transition-colors">Instagram Direct</a></li>
+              <li><a href="/solucoes/crm-integrado" className="hover:text-primary transition-colors">CRM Integrado</a></li>
+              <li><a href="/solucoes/analytics-ia" className="hover:text-primary transition-colors">Analytics IA</a></li>
             </ul>
           </div>
 
@@ -40,10 +34,8 @@ export const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-semibold text-white">Empresa</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Sobre Nós</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Carreiras</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Imprensa</a></li>
+              <li><a href="/sobre-nos" className="hover:text-primary transition-colors">Sobre Nós</a></li>
+              <li><a href="/carreiras" className="hover:text-primary transition-colors">Carreiras</a></li>
             </ul>
           </div>
 
@@ -53,14 +45,14 @@ export const Footer = () => {
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:contato@cristaly.com" className="hover:text-primary transition-colors">
-                  contato@cristaly.com
+                <a href="mailto:traffio.social@gmail.com" className="hover:text-primary transition-colors">
+                  traffio.social@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+5511999999999" className="hover:text-primary transition-colors">
-                  +55 11 99999-9999
+                <a href="tel:+5549991502058" className="hover:text-primary transition-colors">
+                  +55 49 99150-2058
                 </a>
               </li>
             </ul>
