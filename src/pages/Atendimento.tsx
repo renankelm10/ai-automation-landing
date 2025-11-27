@@ -111,7 +111,7 @@ export default function Atendimento() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background selection:bg-primary/30">
         {/* Dynamic Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-50" />
@@ -122,44 +122,65 @@ export default function Atendimento() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg mb-4 animate-slide-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary-foreground/80 tracking-wide">
-              Revolução no Atendimento
-            </span>
-          </div>
+        <div className="container relative z-10 px-4 pt-16 md:pt-20 pb-20 md:pb-32">
+          <div className="flex flex-col items-center text-center space-y-6 md:space-y-10 animate-fade-in">
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Substitua processos <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60">lentos e manuais</span> por <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
-              Agentes de IA 24/7
-            </span>
-          </h1>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              <span className="text-xs md:text-sm font-medium text-primary-foreground/80 tracking-wide">
+                Revolução no Atendimento
+              </span>
+            </div>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Automatize qualificação, atendimento e follow-ups. Treine agentes de IA para falar com seus leads,
-            entender objeções e fechar vendas, tudo isso sem aumentar sua equipe.
-          </p>
+            {/* Main Content */}
+            <div className="space-y-4 md:space-y-6 max-w-5xl mx-auto">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <img
+                  src={cristyalyLogo}
+                  alt="Cristaly AI"
+                  className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                />
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+                  Cristaly<span className="text-primary">.ai</span>
+                </h1>
+              </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <Button
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-              className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
-            >
-              Quero um Agente de IA
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => document.getElementById('agentes')?.scrollIntoView({ behavior: 'smooth' })}
-              className="h-14 px-8 text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all duration-300 rounded-xl"
-            >
-              Ver Modelos
-            </Button>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight px-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                Substitua processos <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60">lentos e manuais</span> por <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
+                  Agentes de IA 24/7
+                </span>
+              </h2>
+
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+                Automatize qualificação, atendimento e follow-ups. Treine agentes de IA para falar com seus leads,
+                entender objeções e fechar vendas, tudo isso sem aumentar sua equipe.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
+              <Button
+                size="lg"
+                onClick={() => setIsModalOpen(true)}
+                className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
+              >
+                Quero um Agente de IA
+                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => document.getElementById('agentes')?.scrollIntoView({ behavior: 'smooth' })}
+                className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg border-white/10 bg-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 rounded-xl backdrop-blur-sm"
+              >
+                Ver Modelos
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -176,31 +197,26 @@ export default function Atendimento() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-16">
             {agents.map((agent, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm relative overflow-hidden"
+                className="group p-5 md:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${agent.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <agent.icon className={`w-7 h-7 ${agent.color}`} />
-                  </div>
-
-                  <h3 className="text-2xl font-bold mb-4 text-white">{agent.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {agent.description}
-                  </p>
+                <div className="mb-3 md:mb-4 inline-flex p-2.5 md:p-3 rounded-xl bg-primary/20 text-primary group-hover:scale-110 transition-transform duration-300">
+                  <agent.icon className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
+                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{agent.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {agent.description}
+                </p>
               </div>
             ))}
           </div>
 
-          <div className="glass-panel p-8 md:p-12 rounded-3xl border-primary/20 bg-gradient-to-br from-white/5 to-transparent text-center max-w-4xl mx-auto">
-            <Bot className="w-12 h-12 text-primary mx-auto mb-6" />
-            <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
+          <div className="glass-panel p-6 md:p-10 rounded-2xl text-center max-w-4xl mx-auto">
+            <Bot className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto mb-4 md:mb-6" />
+            <p className="text-lg md:text-xl text-white/90 font-medium leading-relaxed">
               "Tudo isso integrado às suas ferramentas atuais (CRM, WhatsApp,
               Instagram) sem precisar de código, equipe técnica ou dor de cabeça."
             </p>
@@ -224,11 +240,11 @@ export default function Atendimento() {
               "Otimizados continuamente pela nossa equipe com base em performance.",
               "Focados em conversão real e ROI, não apenas em responder 'oi'.",
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-6 p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-primary/30 transition-colors">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+              <div key={index} className="flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <p className="text-lg md:text-xl text-white/90">{item}</p>
+                <p className="text-base md:text-lg text-white/90">{item}</p>
               </div>
             ))}
           </div>
@@ -244,24 +260,24 @@ export default function Atendimento() {
             </h2>
           </div>
 
-          <div className="glass-panel border-primary/20 p-8 md:p-12 rounded-[2.5rem] relative">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
-              <MessageSquare className="w-6 h-6 text-white" />
+          <div className="glass-panel p-6 md:p-10 rounded-2xl relative">
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
+              <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-white" />
             </div>
 
-            <div className="text-center space-y-8 pt-6">
-              <p className="text-xl md:text-2xl italic text-white/90 leading-relaxed">
+            <div className="text-center space-y-6 md:space-y-8 pt-6">
+              <p className="text-lg md:text-xl italic text-white/90 leading-relaxed">
                 "A Cristaly transformou nossa operação. Nosso time agora foca no
                 que realmente importa enquanto a IA cuida de toda qualificação e
                 follow-up. Aumentamos 40% em conversão em apenas 2 meses."
               </p>
 
               <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-xl shadow-lg mb-2">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg mb-2">
                   JM
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">João Mendes</h4>
+                  <h4 className="text-base md:text-lg font-bold text-white">João Mendes</h4>
                   <p className="text-sm text-primary">CEO, Tech Solutions</p>
                 </div>
               </div>
@@ -286,33 +302,33 @@ export default function Atendimento() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
-            <div className="space-y-4 bg-white/5 p-8 rounded-3xl border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                <Target className="w-6 h-6 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">
+            <div className="space-y-4 bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6 flex items-center gap-3">
+                <Target className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 Implementação
               </h3>
               {features.column1.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 group">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/40 transition-colors">
-                    <CheckCircle2 className="w-3 h-3 text-primary" />
+                  <div className="mt-1 w-4 h-4 md:w-5 md:h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/40 transition-colors">
+                    <CheckCircle2 className="w-2.5 h-2.5 md:w-3 md:h-3 text-primary" />
                   </div>
-                  <p className="text-muted-foreground group-hover:text-white transition-colors">{feature}</p>
+                  <p className="text-sm md:text-base text-muted-foreground group-hover:text-white transition-colors">{feature}</p>
                 </div>
               ))}
             </div>
 
-            <div className="space-y-4 bg-white/5 p-8 rounded-3xl border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                <Rocket className="w-6 h-6 text-accent" />
+            <div className="space-y-4 bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6 flex items-center gap-3">
+                <Rocket className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                 Operação Contínua
               </h3>
               {features.column2.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 group">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/40 transition-colors">
-                    <CheckCircle2 className="w-3 h-3 text-accent" />
+                  <div className="mt-1 w-4 h-4 md:w-5 md:h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/40 transition-colors">
+                    <CheckCircle2 className="w-2.5 h-2.5 md:w-3 md:h-3 text-accent" />
                   </div>
-                  <p className="text-muted-foreground group-hover:text-white transition-colors">{feature}</p>
+                  <p className="text-sm md:text-base text-muted-foreground group-hover:text-white transition-colors">{feature}</p>
                 </div>
               ))}
             </div>
@@ -329,17 +345,17 @@ export default function Atendimento() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1"
+                className="group p-5 md:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
+                <div className="mb-3 md:mb-4 inline-flex p-2.5 md:p-3 rounded-xl bg-primary/20 text-primary group-hover:scale-110 transition-transform duration-300">
+                  <benefit.icon className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors">{benefit.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -367,16 +383,17 @@ export default function Atendimento() {
           <Button
             size="lg"
             onClick={() => setIsModalOpen(true)}
-            className="h-16 px-10 text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+            className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
           >
             🚀 Quero meu Agente de IA Agora
+            <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-white/10 bg-black/40">
-        <p className="text-center text-sm text-muted-foreground">
+      <footer className="py-6 md:py-8 px-4 border-t border-white/10">
+        <p className="text-center text-xs md:text-sm text-muted-foreground">
           © {new Date().getFullYear()} Cristaly AI. Todos os direitos reservados.
         </p>
       </footer>
