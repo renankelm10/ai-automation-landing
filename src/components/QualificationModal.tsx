@@ -37,11 +37,11 @@ export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps)
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className={step === "calendly" ? "max-w-4xl h-[90vh]" : "max-w-md"}>
+      <DialogContent className={step === "calendly" ? "max-w-full sm:max-w-4xl h-[80vh] sm:h-[90vh] mx-4" : "max-w-md mx-4"}>
         {step === "question" && (
           <>
             <DialogHeader>
-              <DialogTitle className="text-2xl text-center">
+              <DialogTitle className="text-xl sm:text-2xl text-center">
                 Vamos começar!
               </DialogTitle>
               <DialogDescription className="text-center text-base mt-4">
@@ -71,7 +71,7 @@ export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps)
         {step === "calendly" && (
           <div className="h-full flex flex-col">
             <DialogHeader className="pb-4">
-              <DialogTitle>Agende sua demonstração</DialogTitle>
+              <DialogTitle className="text-lg sm:text-xl">Agende sua demonstração</DialogTitle>
             </DialogHeader>
             <iframe
               src={calendlyUrl}
@@ -85,8 +85,8 @@ export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps)
 
         {step === "thanks" && (
           <div className="py-8 text-center">
-            <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-            <DialogTitle className="text-2xl mb-2">
+            <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-primary mx-auto mb-4" />
+            <DialogTitle className="text-xl sm:text-2xl mb-2">
               Obrigado pela visita!
             </DialogTitle>
             <DialogDescription className="text-base">
