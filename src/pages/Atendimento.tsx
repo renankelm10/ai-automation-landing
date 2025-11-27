@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { QualificationModal } from "@/components/QualificationModal";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import {
   Target,
   MessageSquare,
   TrendingUp,
@@ -14,6 +21,9 @@ import {
   Bot
 } from "lucide-react";
 import cristyalyLogo from "@/assets/cristaly-logo.png";
+import feedback1 from "@/assets/testimonials/feedback-1.png";
+import feedback2 from "@/assets/testimonials/feedback-2.png";
+import feedback3 from "@/assets/testimonials/feedback-3.png";
 
 export default function Atendimento() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -236,29 +246,31 @@ export default function Atendimento() {
             </h2>
           </div>
 
-          <div className="glass-panel p-6 md:p-10 rounded-2xl relative">
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
-              <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-white" />
-            </div>
-
-            <div className="text-center space-y-6 md:space-y-8 pt-6">
-              <p className="text-lg md:text-xl italic text-white/90 leading-relaxed">
-                "A Cristaly transformou nossa operação. Nosso time agora foca no
-                que realmente importa enquanto a IA cuida de toda qualificação e
-                follow-up. Aumentamos 40% em conversão em apenas 2 meses."
-              </p>
-
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg mb-2">
-                  JM
-                </div>
-                <div>
-                  <h4 className="text-base md:text-lg font-bold text-white">João Mendes</h4>
-                  <p className="text-sm text-primary">CEO, Tech Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full max-w-lg mx-auto"
+          >
+            <CarouselContent>
+              {[feedback1, feedback2, feedback3].map((feedback, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-2">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                      <img
+                        src={feedback}
+                        alt={`Feedback de cliente ${index + 1}`}
+                        className="w-full h-auto object-contain"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 md:left-4" />
+            <CarouselNext className="right-2 md:right-4" />
+          </Carousel>
         </div>
       </section>
 
