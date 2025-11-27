@@ -132,7 +132,7 @@ export default function Atendimento() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
             Substitua processos{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
               lentos e pessoas sobrecarregadas por
@@ -143,7 +143,7 @@ export default function Atendimento() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
             Automatize qualificação, atendimento e follow-ups em minutos com agentes de IA 
             treinados para falar com seus leads, entender suas objeções e fechar mais vendas, 
             sem precisar de equipe extra.
@@ -163,13 +163,13 @@ export default function Atendimento() {
       </section>
 
       {/* Agentes Section */}
-      <section id="agentes" className="py-24 px-4 relative">
+      <section id="agentes" className="py-16 md:py-24 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Nossos <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Agentes Especialistas</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Cada agente é treinado para uma função específica, garantindo máxima eficiência
             </p>
           </div>
@@ -202,16 +202,15 @@ export default function Atendimento() {
       </section>
 
       {/* Diferencial Section */}
-      <section className="py-24 px-4 bg-white/5 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 bg-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 leading-tight">
-            Enquanto o mercado vende 'chatbots', <br />
-            nós entregamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Agentes de IA Completos</span>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 leading-tight">
+            Enquanto o mercado vende 'chatbots', nós entregamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Agentes de IA Completos</span>
           </h2>
 
-          <div className="grid gap-6">
+          <div className="grid gap-4 md:gap-6">
             {[
               "Treinados com dados reais do seu negócio (nada de respostas genéricas).",
               "Otimizados continuamente pela nossa equipe com base em performance.",
@@ -229,10 +228,10 @@ export default function Atendimento() {
       </section>
 
       {/* Depoimentos Section */}
-      <section className="py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Resultados <span className="text-primary">Reais</span>
             </h2>
           </div>
@@ -264,16 +263,15 @@ export default function Atendimento() {
       </section>
 
       {/* Entrega Section */}
-      <section className="py-24 px-4 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background pointer-events-none" />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Zero Trabalho Técnico. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Nós Entregamos Tudo Pronto.</span>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+              Zero Trabalho Técnico. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Nós Entregamos Tudo Pronto.</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Basta passar as informações do seu negócio. Nós cuidamos de toda a
               implementação e entregamos uma operação completa.
             </p>
@@ -314,10 +312,10 @@ export default function Atendimento() {
       </section>
 
       {/* Benefícios Section */}
-      <section className="py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               O Que Você Ganha na <span className="text-primary">Prática</span>?
             </h2>
           </div>
@@ -342,17 +340,15 @@ export default function Atendimento() {
       </section>
 
       {/* CTA Final Section */}
-      <section className="py-24 px-4 mb-20 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 mb-12 md:mb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-            Sua concorrência ainda está <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">treinando pessoas</span>. <br />
-            Você pode <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">treinar uma IA</span>.
+        <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-10 relative z-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight tracking-tight">
+            Sua concorrência ainda está <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">treinando pessoas</span>. Você pode <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">treinar uma IA</span>.
           </h2>
 
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Em 15 a 21 dias, você recebe uma operação completa, 100%
             personalizada e integrada. Sem dor de cabeça.
           </p>
