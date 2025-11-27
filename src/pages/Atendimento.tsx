@@ -23,6 +23,7 @@ import {
 import cristyalyLogo from "@/assets/cristaly-logo.png";
 import feedback2 from "@/assets/testimonials/feedback-2.png";
 import feedback3 from "@/assets/testimonials/feedback-3.png";
+import feedback4 from "@/assets/testimonials/feedback-4.png";
 
 export default function Atendimento() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -253,7 +254,7 @@ export default function Atendimento() {
             className="w-full max-w-2xl mx-auto"
           >
             <CarouselContent>
-              {[feedback2, feedback3].map((feedback, index) => (
+              {[feedback2, feedback3, feedback4].map((feedback, index) => (
                 <CarouselItem key={index}>
                   <div className="p-2">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
