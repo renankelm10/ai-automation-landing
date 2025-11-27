@@ -133,26 +133,20 @@ export default function Atendimento() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Substitua processos <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60">lentos e manuais</span> por <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
-              Agentes de IA 24/7
-            </span>
+            Substitua processos <span className="text-accent">lentos e pessoas sobrecarregadas</span> por agentes de IA que <span className="text-accent">trabalham 24h por você.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Automatize qualificação, atendimento e follow-ups. Treine agentes de IA para falar com seus leads,
-            entender objeções e fechar vendas, tudo isso sem aumentar sua equipe.
+          <p className="text-lg sm:text-xl text-amber-200/70 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            Automatize qualificação, atendimento e follow-ups em minutos com agentes de IA treinados para falar com seus leads, entender suas objeções e fechar mais vendas, sem precisar de equipe extra.
           </p>
 
           <div className="flex justify-center items-center pt-8 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <Button
               size="lg"
               onClick={() => setIsModalOpen(true)}
-              className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
+              className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-accent hover:bg-accent/90 text-black font-semibold shadow-[0_0_30px_-10px_rgba(0,255,255,0.6)] hover:shadow-[0_0_40px_-5px_rgba(0,255,255,0.8)] transition-all duration-300 rounded-xl"
             >
-              Quero um Agente de IA
-              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+              Quero um agente de IA trabalhando para mim
             </Button>
           </div>
         </div>
