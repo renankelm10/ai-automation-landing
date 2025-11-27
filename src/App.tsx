@@ -10,6 +10,7 @@ import InstagramDirect from "./pages/solucoes/InstagramDirect";
 import CrmIntegrado from "./pages/solucoes/CrmIntegrado";
 import AnalyticsIA from "./pages/solucoes/AnalyticsIA";
 import SobreNos from "./pages/SobreNos";
+import Atendimento from "./pages/Atendimento";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/solucoes/crm-integrado" element={<CrmIntegrado />} />
           <Route path="/solucoes/analytics-ia" element={<AnalyticsIA />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
+          <Route path="/atendimento" element={<Atendimento />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
