@@ -11,8 +11,7 @@ import {
   Rocket,
   Users,
   ArrowRight,
-  Bot,
-  Sparkles
+  Bot
 } from "lucide-react";
 import cristyalyLogo from "@/assets/cristaly-logo.png";
 
@@ -122,65 +121,39 @@ export default function Atendimento() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        <div className="container relative z-10 px-4 pt-16 md:pt-20 pb-20 md:pb-32">
-          <div className="flex flex-col items-center text-center space-y-6 md:space-y-10 animate-fade-in">
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 px-4 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg mb-4 animate-slide-up">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span className="text-xs md:text-sm font-medium text-primary-foreground/80 tracking-wide">
+              Revolução no Atendimento
+            </span>
+          </div>
 
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              <span className="text-xs md:text-sm font-medium text-primary-foreground/80 tracking-wide">
-                Revolução no Atendimento
-              </span>
-            </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            Substitua processos <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60">lentos e manuais</span> por <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
+              Agentes de IA 24/7
+            </span>
+          </h1>
 
-            {/* Main Content */}
-            <div className="space-y-4 md:space-y-6 max-w-5xl mx-auto">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                <img
-                  src={cristyalyLogo}
-                  alt="Cristaly AI"
-                  className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
-                />
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
-                  Cristaly<span className="text-primary">.ai</span>
-                </h1>
-              </div>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            Automatize qualificação, atendimento e follow-ups. Treine agentes de IA para falar com seus leads,
+            entender objeções e fechar vendas, tudo isso sem aumentar sua equipe.
+          </p>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight px-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-                Substitua processos <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60">lentos e manuais</span> por <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent text-glow">
-                  Agentes de IA 24/7
-                </span>
-              </h2>
-
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 animate-slide-up" style={{ animationDelay: "0.4s" }}>
-                Automatize qualificação, atendimento e follow-ups. Treine agentes de IA para falar com seus leads,
-                entender objeções e fechar vendas, tudo isso sem aumentar sua equipe.
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
-              <Button
-                size="lg"
-                onClick={() => setIsModalOpen(true)}
-                className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
-              >
-                Quero um Agente de IA
-                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => document.getElementById('agentes')?.scrollIntoView({ behavior: 'smooth' })}
-                className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg border-white/10 bg-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 rounded-xl backdrop-blur-sm"
-              >
-                Ver Modelos
-              </Button>
-            </div>
+          <div className="flex justify-center items-center pt-8 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <Button
+              size="lg"
+              onClick={() => setIsModalOpen(true)}
+              className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
+            >
+              Quero um Agente de IA
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
