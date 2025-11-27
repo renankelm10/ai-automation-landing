@@ -1,34 +1,7 @@
-import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Maria Silva",
-    role: "Proprietária",
-    company: "LojaTech",
-    industry: "E-commerce",
-    initials: "MS",
-    color: "from-primary to-accent",
-    testimonial: "Estava gastando horas respondendo as mesmas perguntas no WhatsApp. Agora o sistema responde automaticamente e eu foco apenas nos casos complexos. Liberou muito do meu tempo.",
-  },
-  {
-    name: "Carlos Mendes",
-    role: "Gerente",
-    company: "Studio Fitness",
-    industry: "Academia",
-    initials: "CM",
-    color: "from-accent to-primary",
-    testimonial: "Automação de agendamentos e lembretes foi um divisor de águas. Menos faltas e mais tempo para cuidar dos alunos que estão presentes.",
-  },
-  {
-    name: "Ana Ferreira",
-    role: "CEO",
-    company: "ConsultaPro",
-    industry: "Consultoria",
-    initials: "AF",
-    color: "from-purple-400 to-primary",
-    testimonial: "A qualificação automática de leads economiza horas da minha equipe. Só conversamos com quem realmente tem potencial de fechar.",
-  },
-];
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import feedback2 from "@/assets/testimonials/feedback-2.png";
+import feedback3 from "@/assets/testimonials/feedback-3.png";
+import feedback4 from "@/assets/testimonials/feedback-4.png";
 
 export const Testimonials = () => {
   return (
@@ -43,38 +16,30 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="group p-4 sm:p-6 md:p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm space-y-3 sm:space-y-4 md:space-y-6"
-            >
-              {/* Avatar and Info */}
-              <div className="flex items-start gap-3 md:gap-4">
-                <div className={`w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-sm sm:text-base md:text-lg flex-shrink-0 shadow-lg`}>
-                  {testimonial.initials}
+        <Carousel
+          opts={{
+            loop: true,
+          }}
+          className="w-full max-w-2xl mx-auto"
+        >
+          <CarouselContent>
+            {[feedback2, feedback3, feedback4].map((feedback, index) => (
+              <CarouselItem key={index}>
+                <div className="p-2">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <img 
+                      src={feedback} 
+                      alt={`Feedback de cliente ${index + 1}`}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-sm sm:text-base md:text-lg font-bold text-white group-hover:text-primary transition-colors">{testimonial.name}</h4>
-                  <p className="text-xs md:text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
-                  <p className="text-xs text-muted-foreground/60">{testimonial.industry}</p>
-                </div>
-              </div>
-
-              {/* Stars */}
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 fill-primary text-primary" />
-                ))}
-              </div>
-
-              {/* Testimonial */}
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed group-hover:text-white/90 transition-colors">
-                "{testimonial.testimonial}"
-              </p>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 -translate-x-1/2 bg-primary/20 hover:bg-primary/40 border-primary/30" />
+          <CarouselNext className="right-0 translate-x-1/2 bg-primary/20 hover:bg-primary/40 border-primary/30" />
+        </Carousel>
       </div>
     </section>
   );
