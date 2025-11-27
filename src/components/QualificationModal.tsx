@@ -16,7 +16,7 @@ interface QualificationModalProps {
 
 export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps) => {
   const [step, setStep] = useState<"question" | "calendly" | "thanks">("question");
-  const calendlyUrl = "https://calendly.com/cristaly/demo"; // Placeholder
+  const calendlyUrl = "https://calendly.com/renankelm-contact/30min";
 
   const handleYes = () => {
     setStep("calendly");
