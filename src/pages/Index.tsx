@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { UseCases } from "@/components/UseCases";
@@ -7,11 +7,17 @@ import { Testimonials } from "@/components/Testimonials";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { QualificationModal } from "@/components/QualificationModal";
+import { sendWebhook } from "@/lib/webhooks";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    sendWebhook("page_view", { page: "home" });
+  }, []);
+
   const handleCTAClick = () => {
+    sendWebhook("cta_click", { action: "agendar_conversa" });
     setIsModalOpen(true);
   };
 
