@@ -12,11 +12,12 @@ import { CheckCircle } from "lucide-react";
 interface QualificationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  calendlyUrl?: string;
 }
 
-export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps) => {
+export const QualificationModal = ({ isOpen, onClose, calendlyUrl }: QualificationModalProps) => {
   const [step, setStep] = useState<"question" | "calendly" | "thanks">("question");
-  const calendlyUrl = "https://calendly.com/renankelm-contact/30min";
+  const url = calendlyUrl || "https://calendly.com/renankelm-contact/30min";
 
   const handleYes = () => {
     setStep("calendly");
@@ -74,7 +75,7 @@ export const QualificationModal = ({ isOpen, onClose }: QualificationModalProps)
               <DialogTitle className="text-lg sm:text-xl">Agende sua demonstração</DialogTitle>
             </DialogHeader>
             <iframe
-              src={calendlyUrl}
+              src={url}
               width="100%"
               height="100%"
               frameBorder="0"
