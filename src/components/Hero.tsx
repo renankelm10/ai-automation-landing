@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, Zap, Globe, Settings } from "lucide-react";
 import cristalyLogo from "@/assets/cristaly-logo.png";
 
-export const Hero = () => {
+interface HeroProps {
+  onCTAClick?: () => void;
+}
+
+export const Hero = ({ onCTAClick }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background selection:bg-primary/30">
       {/* Dynamic Background */}
@@ -59,13 +63,11 @@ export const Hero = () => {
           <div className="flex justify-center items-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
             <Button
               size="lg"
-              asChild
+              onClick={onCTAClick}
               className="h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-primary hover:bg-primary/90 shadow-[0_0_30px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] transition-all duration-300 rounded-xl group"
             >
-              <a href="https://wa.me/554991502058?text=Ol%C3%A1%2C%20quero%20automatizar%20meu%20neg%C3%B3cio%21" target="_blank" rel="noopener noreferrer">
-                Agendar Conversa
-                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              Agendar Conversa
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
