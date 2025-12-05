@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { sendWebhook } from "@/lib/webhooks";
 
 interface QualificationModalProps {
   isOpen: boolean;
@@ -20,10 +21,12 @@ export const QualificationModal = ({ isOpen, onClose, calendlyUrl }: Qualificati
   const url = calendlyUrl || "https://calendly.com/renankelm-contact/30min";
 
   const handleYes = () => {
+    sendWebhook("qualification_answer", { answer: "sim", qualified: true });
     setStep("calendly");
   };
 
   const handleNo = () => {
+    sendWebhook("qualification_answer", { answer: "nao", qualified: false });
     setStep("thanks");
     setTimeout(() => {
       onClose();
